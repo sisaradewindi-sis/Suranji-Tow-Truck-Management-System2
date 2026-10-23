@@ -1,0 +1,377 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #ff7900;
+    --black: #151515;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+    color: #292929;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #111111, #292929);
+    color: white;
+    text-align: center;
+    padding: 27px 16px;
+    border-bottom: 5px solid var(--orange);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+header h1 {
+    font-size: clamp(21px, 4vw, 32px);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 6px;
+    color: #ffb36d;
+    font-size: 14px;
+}
+
+.container {
+    width: min(100% - 30px, 1000px);
+    margin: 35px auto;
+    padding: 32px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.container h2 {
+    color: var(--black);
+    font-size: clamp(25px, 4vw, 34px);
+    font-weight: 800;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    border-left: 6px solid var(--orange);
+}
+
+.description {
+    color: #666;
+    margin-bottom: 27px;
+    font-size: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px;
+}
+
+.field {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    color: #292929;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 9px;
+    background: #fafafa;
+    color: #222;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.field input,
+.field select {
+    min-height: 48px;
+}
+
+.field textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--orange);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 121, 0, 0.13);
+}
+
+.map-section {
+    margin-top: 32px;
+    padding: 24px;
+    background: #fffaf5;
+    border: 1px solid #ffddbd;
+    border-radius: 15px;
+}
+
+.map-section h3 {
+    font-size: 22px;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.map-section > p {
+    color: #686868;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+#routeMap {
+    width: 100%;
+    height: 340px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #eee;
+    z-index: 1;
+}
+
+.map-btn {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    margin: 18px 0;
+    padding: 13px 18px;
+    background: var(--black);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.map-btn:hover {
+    background: #383838;
+    transform: translateY(-1px);
+}
+
+.map-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+#mapMessage {
+    padding: 11px 13px;
+    margin-bottom: 15px;
+    background: white;
+    border-left: 4px solid var(--orange);
+    border-radius: 5px;
+    color: #555;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.distance-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+    padding: 17px;
+    background: white;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+}
+
+.distance-box span {
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.distance-box strong {
+    color: var(--black);
+    font-size: 19px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+#fee {
+    color: #e66b00;
+}
+
+#feeDescription {
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: #fff0e2;
+    color: #864000;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.message {
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.success {
+    background: #e9f8ef;
+    color: #16834a;
+    border: 1px solid #b7e6c8;
+}
+
+.error {
+    background: #fff0ef;
+    color: #d93025;
+    border: 1px solid #f4c4c0;
+}
+
+.submit-btn {
+    width: 100%;
+    min-height: 54px;
+    margin-top: 25px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #ff7900, #ed5e00);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(255, 121, 0, 0.2);
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(255, 121, 0, 0.3);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.back-link:hover {
+    color: #d95f00;
+    background: #fff0e2;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: calc(100% - 22px);
+        margin: 20px auto;
+        padding: 22px 17px;
+        border-radius: 13px;
+    }
+
+    .form-grid {
+        gap: 17px;
+    }
+
+    .map-section {
+        padding: 16px;
+    }
+
+    #routeMap {
+        height: 290px;
+    }
+}
+
+@media (max-width: 520px) {
+    header {
+        padding: 22px 12px;
+    }
+
+    header h1 {
+        font-size: 21px;
+        letter-spacing: 0.3px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+        margin: 14px auto;
+        padding: 20px 14px;
+    }
+
+    .container h2 {
+        font-size: 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+        font-size: 16px;
+    }
+
+    .map-section {
+        padding: 13px;
+    }
+
+    .map-section h3 {
+        font-size: 20px;
+    }
+
+    #routeMap {
+        height: 250px;
+    }
+
+    .distance-box {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px;
+    }
+
+    .distance-box strong {
+        font-size: 20px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+    }
+}

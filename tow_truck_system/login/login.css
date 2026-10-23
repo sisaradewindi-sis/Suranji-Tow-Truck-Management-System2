@@ -1,0 +1,117 @@
+/* SURANJI TOW TRUCK SERVICE - Login Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(
+        rgba(23, 23, 23, 0.75),
+        rgba(23, 23, 23, 0.75)
+    ), url("/tow_truck_system/image/tow-truck.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* thiru lassana kirimata uda thabili kotasak dama */
+ .login-container {
+    width: 100%;
+    max-width: 420px;
+    background-color: rgba(255, 255, 255, 0.96);
+    color: #171717;
+    padding: 35px 30px;
+    border-radius: 18px;
+    border-top: 5px solid #F97316;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+.login-container h1 {
+    color: #171717;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-container h1 span {
+    color: #F97316;
+}
+
+.login-container h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0 25px;
+}
+
+.login-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    outline: none;
+}
+
+.login-container input:focus {
+    border-color: #F97316;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.15);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 13px;
+    background-color: #F97316;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #ea580c;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666666;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        padding: 28px 20px;
+    }
+
+    .login-container h1 {
+        font-size: 21px;
+    }
+
+    .login-container h2 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #424242;
+    color: #171717;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.top-bar {
+    background: #171717;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #cf5e17;
+}
+
+.brand {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: #e5a323;
+    color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+    padding: 9px 20px;
+    border: 1px solid #e5a323;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.login-link:hover {
+    background: #e5a323;
+    color: #171717;
+}
+
+/* Registration section */
+.page-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e0e6ef;
+    box-shadow: 0 8px 30px rgba(16, 29, 50, 0.10);
+}
+
+/* Heading */
+.card-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.heading-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #fff2d2;
+    color: #b87900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-heading h1 {
+    font-size: 26px;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.card-heading p {
+    color: #788496;
+    font-size: 14px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d6deea;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    background: #fbfcfe;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #e5a323;
+    box-shadow: 0 0 0 3px rgba(229, 163, 35, 0.15);
+    background: white;
+}
+
+.form-group input::placeholder {
+    color: #9ba6b5;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #788496;
+}
+
+/* Register button */
+.submit-btn {
+    width: 100%;
+    display: block;
+    padding: 14px;
+    background: #e5a323;
+    color: #101d32;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #cf9017;
+}
+
+/* Login link below form */
+.bottom-text {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 13px;
+    color: #788496;
+}
+
+.bottom-text a {
+    color: #F97316;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+}
+
+/* Success and error messages */
+.message {
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+}
+
+.message.success {
+    color: #187444;
+    background: #e8f7ee;
+    border: 1px solid #b8e5ca;
+}
+
+.message.error {
+    color: #b42318;
+    background: #fff0ef;
+    border: 1px solid #f3c3bf;
+}
+
+/* Footer */
+.footer {
+    background: #171717;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 12px;
+    border-top: 4px solid #e56a23;
+}
+
+.footer p + p {
+    color: #aeb9c9;
+    margin-top: 5px;
+}
+
+/* Mobile screen */
+@media (max-width: 520px) {
+    .top-bar {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .brand {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 20px;
+    }
+
+    .login-link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .card-heading h1 {
+        font-size: 23px;
+    }
+}
